@@ -1,0 +1,25 @@
+# Composer files
+composer.phar
+vendor/
+
+# Local configs
+config/autoload/*.local.php
+
+# Binary gettext files
+*.mo
+
+# Data
+zf-bookstore/data/logs/
+zf-bookstore/data/cache/
+zf-bookstore/data/sessions/
+zf-bookstore/data/tmp/
+zf-bookstore/temp/
+
+#Doctrine 2
+zf-bookstore/data/DoctrineORMModule/Proxy/
+zf-bookstore/data/DoctrineORMModule/cache/
+
+
+# Legacy ZF1
+zf-bookstore/demos/
+zf-bookstore/extras/documentation

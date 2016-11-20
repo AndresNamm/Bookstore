@@ -1,0 +1,15 @@
+<br /><br />
+<div id="view-content">
+    <table><p><a href="<?php
+        echo $this->url(
+                array(
+            'controller' => 'auth',
+            'action' => 'logout'
+                ), 'default', true)
+        ?>">Logout</a></p></table>
+        <?php
+        echo $this->username;
+        $this->form->setAction($this->url());
+        echo $this->form;
+        ?>
+</div>

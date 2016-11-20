@@ -1,0 +1,61 @@
+
+<script type="text/javascript" src="/tablesort/dist/js/jquery.tablesorter.js"></script>
+<link rel="stylesheet" type="text/css" media="screen" href="/tablesort/dist/css/theme.blue.css" /> 
+       
+<style>
+table.tablesorter tbody tr.normal-row td {
+  background: #888;
+  color: #fff;
+}
+table.tablesorter tbody tr.alt-row td {
+  background: #555;
+  color: #fff;
+}
+</style>
+<script type="text/javascript">
+$(document).ready(function() {
+
+  // call the tablesorter plugin
+  $("#myTable").tablesorter({
+    theme: 'blue',
+    // initialize zebra striping of the table
+    widgets: ["zebra"],
+    // change the default striping class names
+    // updated in v2.1 to use widgetOptions.zebra = ["even", "odd"]
+    // widgetZebra: { css: [ "normal-row", "alt-row" ] } still works
+    widgetOptions : {
+      zebra : [ "normal-row", "alt-row" ]
+    }
+    
+    
+  });
+
+});
+    
+</script>
+
+
+<article class="mainArticle">
+    <table id="myTable" class="tablesorter">
+        <thead>
+        <th class="tabletab header" width="30%"><a>Title</a></th>
+        <th class="tabletab header" width="30%"><a>Author</a></th>
+        <th class="tabletab header" width="5%"><a>Price   </a></th>
+        <th class="tabletab header" width="10%"><a>Category</a></th>
+        <th class="tabletab header" width="10%"><a> Picture   </a></th>
+        </thead>
+        <tbody>
+
+            <? foreach ($this->books as $book) { ?>
+            <tr>
+                <td class="value"><a href="./detail/id/<?= $book->id ?>"><?= $book->name ?></a></td>
+                <td class="value"><?= $book->author ?></td>
+                <td class="value"><?= $book->price ?></td>
+                <td class="value"><?= $book->categoryId ?></td>
+                <td class="value"><a href="./detail/id/<?= $book->id ?>"><img width="100" src="/<?= $book->imageUrl ?>"/></a></td>
+            </tr>
+            <? } ?>
+        </tbody>
+
+    </table>
+</article>

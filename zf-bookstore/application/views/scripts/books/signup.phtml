@@ -1,0 +1,28 @@
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/jquery-ui.min.js"></script>
+
+<script>
+    $(function () {
+        $("#birthday").datepicker();
+    });
+    $.datepicker.setDefaults({
+
+        showOn: "both",
+
+        buttonImageOnly: true,
+
+        buttonImage: "calendar.gif",
+
+        buttonText: "Calendar"
+        
+     
+    });
+
+
+</script>
+<div id="view-content">
+
+    <?php
+    $this->form->setAction($this->url());
+    echo $this->form;
+    ?>
+</div>

@@ -1,0 +1,90 @@
+
+html { font-size: 16px; min-height: 100%; margin-bottom: 1px; }
+body { font-size: 90.5%; font-family: Verdana, Arial, sans-serif; color: #555555; background: white  repeat-x; }
+table { margin-left: auto; margin-right: auto;}
+
+
+
+
+td.title { background-color: #336699; text-align: Center; border-style: outset; border-width: 1;font-size: 12pt; color: #FFFFFF; font-weight: bold}
+td.field { background-color: #FFEAC5; border-style: inset; border-width: 0; font-size: 10pt; color: #000000}
+td.required { background-color: #FFEAC5; border-style: inset; border-width: 0; font-size: 10pt; color: #000000}
+td.value {background-color: #FFFFFF; border-width: 1; font-size: 10pt; color: #000000}
+td.tabletab{background-color: #FFFFFF; border-style: inset; border-width: 0;font-size: 10pt; color: #CE7E00; font-weight: bold}
+a.prev, a.next {font-size: 10pt; color: #CE7E00; font-weight: bold}
+
+.ui-datepicker .ui-widget-content {
+    background: #FFEAC5;
+}
+
+.ui-datepicker {
+    /*background: transparent;*/
+    background: yellow;
+}
+
+
+#content { }
+  #content h1 { font-size: 2.4em; font-weight: normal; line-height: 32px; margin: 0px 0 50px 0; }
+  #content p { font-size: 1.4em; line-height: 22px; margin-bottom: 20px; color: black}
+  
+  /* relevant for the book image - start */
+  #gallery { position: relative; }
+    #pictures { position: relative; width:350; height: auto; }
+    #pictures img { position: absolute; width:100%;top: 0; right: 0; left:0 }
+    
+    #prev, #next { margin-top: 520px; text-align: left; font-size: 1em; }
+  /* relevant for the book image - end */
+
+  .zend_form{  
+background:#fff;  
+width:460px;  
+margin:5px auto;  
+padding:0;  
+overflow:auto;  
+}  
+  
+.zend_form dt{  
+padding:0;  
+clear:both;  
+width:30%;  
+float:left;  
+text-align:right;  
+margin:5px 5px 5px 0;  
+}  
+  
+.zend_form dd{  
+padding:0;  
+float:left;  
+width:68%;  
+margin:5px 2px 5px 0;  
+}  
+  
+.zend_form p{  
+padding:0;  
+margin:0;  
+}  
+  
+.zend_form input, .zend_form textarea{  
+margin:0 0 2px 0;  
+padding:0;  
+}  
+  
+.submit{  
+float:right;  
+}  
+
+
+.footerTable {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+aside{
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.required:before{content:'* '}  
+  
+.optional:before{content:'+ '}  

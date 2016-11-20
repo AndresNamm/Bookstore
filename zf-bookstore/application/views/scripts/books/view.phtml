@@ -1,0 +1,96 @@
+<link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" /> 
+<link rel="stylesheet" href="/lightbox2-master/dist/css/lightbox.min.css">
+<script src="/lightbox2-master/dist/js/lightbox-plus-jquery.min.js"></script>
+<script type="text/javascript" src="/js/search.js"></script>
+
+
+<!-- for home exercise -->
+
+<table> 
+    <tr> 
+        <td valign="top">  
+            <table width="700"> 
+                <tr valign="bottom"> 
+                <p><a href="<?php
+                    echo $this->url(
+                            array(
+                        'controller' => 'auth',
+                        'action' => 'login'
+                            ), 'default', true)
+                    ?>">Login</a></p>
+
+                <p><a href="<?php
+                    echo $this->url(
+                            array(
+                        'controller' => 'books',
+                        'action' => 'insert'
+                            ), 'default', true)
+                    ?>">Add a new Book</a></p>
+    </tr> 
+</table> 
+</td> 
+</tr> 
+</table> 
+<aside>
+    <table> 
+        <tr> 
+            <td >  
+                <table> 
+                    <tr> 
+                    <form>
+                        <input type="text" id="searchBox" >
+                        <input   type="button" id="searchButton" value="Search ID">   
+                    </form>
+        </tr> 
+    </table> 
+</td> 
+</tr> 
+</table> 
+</aside>
+
+<!--- end home exercise -->
+<table> 
+    <tr>  
+        <td>
+
+            <article class="mainArticle">
+                <table>
+                    <tr>
+                        <td class="title" colspan="2"><a name="Results">Book Listing</a></td>
+                    </tr>
+
+                    <? 
+                    foreach($this->books as $book ){ ?>
+
+                    <tr>
+                        <td class="tabletab">Title </td><td class="value"><a href="./detail/id/<?= $book->id ?>"><?= $book->name ?></a>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="tabletab">Author </td><td class="value"><?= $book->author ?>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="tabletab">Price </td><td class="value"><?= $book->price ?>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="tabletab">Category </td><td class="value"><?= $book->categoryId ?>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="tabletab">Image URL </td><td class="value"><a href="/<?= $book->imageUrl ?>"  data-lightbox="image-<?= $book->id ?>" ><img  width="100" src="/<?= $book->imageUrl ?>"></a></td>
+                    </tr>
+
+                    <tr>
+                        <td class="title" colspan="2" class="value">&nbsp;</td>
+                    </tr>
+
+
+
+                    <? } ?>
+
+
+
+
+                </table>
+            </article>
+        </td> 
+    </tr> 
+</table>
