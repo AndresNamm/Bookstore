@@ -6,3 +6,6 @@ My first project in php using Zend framework.
 4. Theres an Zend authentication controller with signup, login, logout, edit actions (See Resource 3)  
 5. Member model and MemberMapper to store the members data 
 6. Information required for the signup form is: login ID, password, first name, last name, email and birthday.  
+
+
+Fair work with many errors in HTML5 validation; Not search by name ajax load; no zebra coloring (1 color only). The member module is incomplete implemented. The signup action should be implemented in the auth controller instead of books controller. Late penalty reduced a bit from 6 points to 5 points due to the technical problems encountered 
